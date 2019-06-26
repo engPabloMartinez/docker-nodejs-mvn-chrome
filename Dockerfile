@@ -3,8 +3,8 @@ MAINTAINER	Pablo Martinez <ing.martinez.pablo@gmail.com>
 
 RUN apt update
 
-# Install Maven
-RUN apt install -y maven
+# Install Maven and Java
+RUN apt install -y maven default-jdk
 
 # Install Chrome
 RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
@@ -17,4 +17,3 @@ RUN npm init --yes
 RUN npm install chromedriver
 
 ENV PATH="/opt/nodejs/node_modules/chromedriver/bin:${PATH}"
-ENV JAVA_HOME=/usr/bin/java
