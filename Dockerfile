@@ -15,3 +15,6 @@ RUN mkdir /opt/nodejs
 WORKDIR /opt/nodejs
 RUN npm init --yes
 RUN npm install chromedriver
+
+ENV PATH="/opt/nodejs/node_modules/chromedriver/bin:${PATH}"
+ENV JAVA_HOME=/usr/bin/java
